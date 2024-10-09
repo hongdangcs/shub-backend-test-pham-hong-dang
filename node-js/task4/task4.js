@@ -17,10 +17,10 @@ const execute = async () => {
     const data = parsedData.data;
     const query = parsedData.query;
 
-    const sum1 = [0]; // sum of all elements
-    const sum2 = [0]; // sum of all elements at even index - sum of all elements at odd index
+    const sum1 = [0]; // tổng của tất cả các phần tử từ
+    const sum2 = [0]; // tổng của các phần tử chẵn - tổng của các phần tử lẻ
 
-    // Calculate sum1 and sum2 from 0 to i for each i
+    //  tính tổng của các phần tử từ 0 đến i
     for (let i = 0; i < data.length; i++) {
         sum1.push(sum1[i] + data[i]);
         if (i % 2 == 0) {
@@ -33,15 +33,14 @@ const execute = async () => {
     const result = [];
     for (let i = 0; i < query.length; i++) {
         if (query[i].type == '1') {
-            // if type is 1, calculate sum1 of the range and push to result
+            // nếu type là 1, tính tổng của 1 range và push vào result
             result.push(sum1[query[i].range[1] + 1] - sum1[query[i].range[0]]);
         } else {
-            // if type is 2, calculate sum2 of the range and push to result
+            //  nếu type là 2, tính tổng 2 của range và push vào result
             if (query[i].range[0] % 2 == 0) {
-
                 result.push(sum2[query[i].range[1] + 1] - sum2[query[i].range[0]]);
             } else {
-                // if the first index of the range is odd, the result will be negative
+                // nếu range[0] là số lẻ, thì đổi dấu
                 result.push(sum2[query[i].range[0]] - sum2[query[i].range[1] + 1]);
             }
         }
