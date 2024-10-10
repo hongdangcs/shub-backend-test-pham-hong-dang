@@ -15,6 +15,10 @@ function handleApiQuery(req, res, uploadedFile) {
             res.status(400).send('Gio bat dau phai nho hon gio ket thuc.');
             return;
         }
+        if (gio_bat_dau < 0 || gio_ket_thuc > 235959) {
+            res.status(400).send('Gio bat dau va gio ket thuc phai nam trong khoang 000000 - 235959.');
+            return;
+        }
         // lay sheet dau tien
         const sheet = uploadedFile.Sheets[uploadedFile.SheetNames[0]];
         const range = xlsx.utils.decode_range(sheet['!ref']);
@@ -39,7 +43,7 @@ function handleApiQuery(req, res, uploadedFile) {
 
         res.json({totalSum});
     } else {
-        res.status(400).send('Invalid query, please provide start time and end time in hhmmss format.');
+        res.status(400).send('Sai định dạng thời gian. Vui lòng nhập lại hhmmss');
     }
 }
 

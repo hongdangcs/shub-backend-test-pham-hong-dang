@@ -65,29 +65,30 @@ Query string:
     ├── golang
     │   ├── task1
     │   │   ├── task1.go
-    │   │   ├── handle-function
-    │   │   │   ├── handle-index.go
-    │   │   │   ├── handle-query.go
-    │   │   │   ├── handle-upload.go
-    │   │   │   ├── handle-api-query.go
-    │   ├── task4
-    │   │   ├── task4.go
+    │   │   ├── routes.go
+    │   │   └── handle-function
+    │   │       ├── handle-index.go
+    │   │       ├── handle-query.go
+    │   │       ├── handle-upload.go
+    │   │       └── handle-api-query.go
+    │   └── task4
+    │       └── task4.go
     │
     ├── node-js
     │   ├── task1
     │   │   ├── task1.js
     │   │   ├── uploads
-    │   │   ├── handle-function
-    │   │   │   ├── handle-index.js
-    │   │   │   ├── handle-query.js
-    │   │   │   ├── handle-upload.js
-    │   │   │   ├── handle-api-query.js
-    │   ├── task4
-    │   │   ├── task4.js
+    │   │   └── handle-function
+    │   │       ├── handle-index.js
+    │   │       ├── handle-query.js
+    │   │       ├── handle-upload.js
+    │   │       └── handle-api-query.js
+    │   └── task4
+    │       └── task4.js
     │
-    ├── task3
-    │   ├── task3.sql
-    │   ├── task3-ERD.png
+    └── task3
+        ├── task3.sql
+        └── task3-ERD.png
   
 ## Cách chạy code Nodejs
 - Yêu cầu: Nodejs, npm

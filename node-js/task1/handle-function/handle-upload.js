@@ -18,7 +18,7 @@ function handleUpload(req, res) {
     } else {
         // xoa file neu khong phai la file excel
         fs.unlinkSync(file.path);
-        res.status(400).send('Invalid file type. Please upload an Excel file.');
+        res.status(400).send('File không phải là file excel.');
     }
     return uploadedFile;
 }
