@@ -86,9 +86,10 @@ Query string:
     │   └── task4
     │       └── task4.js
     │
-    └── task3
-        ├── task3.sql
-        └── task3-ERD.png
+    └── sql
+        └── task3
+            ├── task3.sql
+            └── task3-ERD.png
   
 ## Cách chạy code Nodejs
 - Yêu cầu: Nodejs, npm
